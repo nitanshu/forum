@@ -1,6 +1,8 @@
-<h1>Posts</h1>
+<h1>Forum</h1>
 <% @posts.each do |post| %>
   <p>
-    <%= link_to(post.title, post.body, target: "_blank") %> - <%= link_to("Show Page", post) %>
+    <%= post.title %> - <%= link_to("Comments Thread", post) %>
   </p>
 <% end %>
+
+<%= link_to 'Post a Question', new_post_path %>
